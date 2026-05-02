@@ -30,5 +30,6 @@ npm start
 - Improve UI
 - Deploy full project
 
-## 👩‍💻 Author
-Manvi Jain
+## 👩‍💻 Authors
+- Manvi Jain  
+- Vivank Tyagi
