@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>Visualizer — AlgoVian</title><meta name="description" content="Step-by-step animated visualizations of sorting and graph algorithms."></head>
+<body>
+<header id="navbar"></header>
+<div class="container">
+  <div class="viz-header">
+    <div>
+      <h1>Algorithm Visualizer</h1>
+      <p style="color:var(--text-secondary);margin-top:4px">Watch sorting algorithms operate step by step.</p>
+    </div>
+    <div class="viz-tabs">
+      <div class="viz-tab active" data-algo="bubble">Bubble Sort</div>
+      <div class="viz-tab" data-algo="selection">Selection Sort</div>
+      <div class="viz-tab" data-algo="insertion">Insertion Sort</div>
+    </div>
+  </div>
+  <div class="viz-area" id="vizArea"></div>
+  <div class="viz-controls">
+    <button class="btn btn-primary" id="playBtn">Play</button>
+    <button class="btn btn-secondary" id="resetBtn">Reset</button>
+    <button class="btn" id="explainStepBtn" style="background:#8b5cf6;color:white;display:none;">Explain this step ✨</button>
+    <div class="speed-wrap">
+      <span>Speed</span>
+      <input type="range" id="speedInput" min="1" max="5" value="3">
+    </div>
+  </div>
+  <div class="viz-info" id="vizInfo"></div>
+  <div id="stepExplanation" class="step-explanation hidden"></div>
+
+  <div class="section-head" style="margin-top:40px"><h2>More Algorithms</h2></div>
+  <div class="algo-grid">
+    <div class="algo-card"><div class="cat">Sorting</div><h4>Merge Sort</h4><span class="tag">O(n log n)</span></div>
+    <div class="algo-card"><div class="cat">Sorting</div><h4>Quick Sort</h4><span class="tag">O(n log n)</span></div>
+    <div class="algo-card"><div class="cat">Graph</div><h4>BFS</h4><span class="tag">O(V+E)</span></div>
+    <div class="algo-card"><div class="cat">Graph</div><h4>Dijkstra</h4><span class="tag">O((V+E) log V)</span></div>
+    <div class="algo-card"><div class="cat">DP</div><h4>Knapsack</h4><span class="tag">O(nW)</span></div>
+    <div class="algo-card"><div class="cat">Backtracking</div><h4>N-Queens</h4><span class="tag">O(n!)</span></div>
+  </div>
+</div>
+<script src="js/navbar.js"></script>
+<script src="js/api.js"></script>
+<script src="js/visualizer.js"></script>
+</body></html>

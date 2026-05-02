@@ -1,0 +1,28 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>Learn — AlgoVian</title><meta name="description" content="Theory, formulas, code, and complexity for core algorithm topics."></head>
+<body>
+<header id="navbar"></header>
+<div class="learn-layout">
+  <aside class="sidebar">
+    <input id="topicSearch" class="search" type="text" placeholder="Search topics…">
+    <ul class="topic-list" id="topicList"></ul>
+  </aside>
+  <main class="main-content" id="topicMain"></main>
+  
+  <button id="askAIBtn" class="ai-float-btn">Ask AI Tutor</button>
+  <div id="aiChatPanel" class="ai-chat-panel hidden">
+    <div class="chat-header">
+      <h3>AI Tutor</h3>
+      <button id="closeChatBtn" class="close-btn">&times;</button>
+    </div>
+    <div id="chatHistory" class="chat-history"></div>
+    <div class="chat-input-area">
+      <input type="text" id="chatInput" placeholder="Ask about this topic...">
+      <button id="sendChatBtn" class="btn btn-primary">Send</button>
+    </div>
+  </div>
+</div>
+<script src="js/navbar.js"></script>
+<script src="js/api.js"></script>
+<script src="js/topics-data.js"></script>
+<script src="js/learn.js"></script>
+</body></html>

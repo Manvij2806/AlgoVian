@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Sign Up — AlgoVian</title>
+</head>
+<body>
+<header id="navbar"></header>
+
+<div class="container" style="max-width: 500px; margin-top: 40px;">
+  <div class="topic-card" style="padding: 40px;">
+    <h1 style="font-size: 28px; font-weight: 700; margin-bottom: 8px; text-align: center;">Join AlgoArena</h1>
+    <p style="color: var(--text-secondary); text-align: center; margin-bottom: 32px;">Create an account to track your progress</p>
+    
+    <form id="signupForm" style="display: flex; flex-direction: column; gap: 20px;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label for="name" style="font-size: 13px; font-weight: 500;">Full Name</label>
+        <input type="text" id="name" required class="search" style="margin-bottom: 0;" placeholder="John Doe">
+      </div>
+      
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label for="email" style="font-size: 13px; font-weight: 500;">Email Address</label>
+        <input type="email" id="email" required class="search" style="margin-bottom: 0;" placeholder="john@example.com">
+      </div>
+      
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label for="password" style="font-size: 13px; font-weight: 500;">Password</label>
+        <input type="password" id="password" required class="search" style="margin-bottom: 0;" placeholder="••••••••">
+      </div>
+      
+      <button type="submit" class="btn btn-primary" style="margin-top: 10px; padding: 12px; font-size: 15px;">Create Account</button>
+    </form>
+    
+    <p style="text-align: center; margin-top: 24px; font-size: 13px; color: var(--text-secondary);">
+      Already have an account? <a href="#" style="color: var(--primary); font-weight: 500;">Sign in</a>
+    </p>
+  </div>
+</div>
+
+<script src="js/navbar.js"></script>
+<script src="js/signup.js"></script>
+</body>
+</html>

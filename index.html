@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="css/style.css"><title>AlgoVian — Learn, Visualize & Compete in Algorithms</title><meta name="description" content="Master Design and Analysis of Algorithms with interactive lessons, visualizers, and 1v1 quiz battles."></head>
+<body>
+<header id="navbar"></header>
+
+<section class="hero">
+  <span class="badge">Design & Analysis of Algorithms</span>
+  <h1>Learn. Visualize. Compete.</h1>
+  <p>An interactive platform to master algorithms — read the theory, watch them run step by step, and battle friends or AI in quiz rounds.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="learn.html">Start Learning</a>
+    <a class="btn btn-secondary" href="game.html">Play vs AI</a>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat"><div class="stat-num">40+</div><div class="stat-label">Concepts</div></div>
+  <div class="stat"><div class="stat-num">15+</div><div class="stat-label">Visualizers</div></div>
+  <div class="stat"><div class="stat-num">500+</div><div class="stat-label">Questions</div></div>
+  <div class="stat"><div class="stat-num">1v1</div><div class="stat-label">Multiplayer</div></div>
+</section>
+
+<section class="container">
+  <div class="section-head">
+    <h2>Explore Topics</h2>
+    <p>Pick a topic and dive into theory, formulas, code, and complexity.</p>
+  </div>
+  <div class="topic-grid" id="homeTopics"></div>
+</section>
+
+<footer style="border-top:1px solid var(--border);padding:24px;text-align:center;color:var(--text-secondary);font-size:12px">
+  © 2026 AlgoVian. Built for algorithm learners.
+</footer>
+
+<script src="js/navbar.js"></script>
+<script>
+const TOPICS = [
+  {n:'Big-O Notation', s:'Measure how algorithms scale', c:'#534AB7', i:'O', p:75},
+  {n:'Sorting', s:'Bubble, merge, quick & more', c:'#2BA39A', i:'S', p:60},
+  {n:'Graphs', s:'BFS, DFS, Dijkstra', c:'#D9A441', i:'G', p:45},
+  {n:'Greedy', s:'Locally optimal choices', c:'#7E5BD0', i:'Gr', p:50},
+  {n:'Divide & Conquer', s:'Break, solve, combine', c:'#3BA776', i:'DC', p:55},
+  {n:'Dynamic Programming', s:'Overlapping subproblems', c:'#D9534F', i:'DP', p:40},
+  {n:'Backtracking', s:'Try, fail, back up', c:'#5BC9C0', i:'BT', p:30},
+  {n:'NP-Complete', s:'The frontier of hard problems', c:'#8B6914', i:'NP', p:15}
+];
+document.getElementById('homeTopics').innerHTML = TOPICS.map(t=>`
+  <a class="topic-card" href="learn.html">
+    <div class="topic-icon" style="background:${t.c}">${t.i}</div>
+    <h3>${t.n}</h3>
+    <p>${t.s}</p>
+    <div class="progress"><div class="progress-fill" style="width:${t.p}%"></div></div>
+  </a>`).join('');
+</script>
+</body></html>
